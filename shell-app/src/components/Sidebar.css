@@ -1,0 +1,130 @@
+/* =========================
+   SIDEBAR CONTAINER
+========================= */
+.sidebar {
+  width: 260px;
+  height: calc(100vh - 72px); /* below navbar */
+  position: sticky;
+  top: 72px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.95),
+    rgba(2, 6, 23, 0.95)
+  );
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 1.25rem 1rem;
+
+  box-shadow:
+    10px 0 30px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   NAV
+========================= */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+/* =========================
+   LINK BASE
+========================= */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.6rem;
+
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  color: #cbd5f5;
+
+  transition:
+    background 0.25s ease,
+    color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+/* =========================
+   ICON
+========================= */
+.sidebar-icon {
+  font-size: 1.1rem;
+  width: 22px;
+  text-align: center;
+}
+
+/* =========================
+   HOVER STATE
+========================= */
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+/* =========================
+   ACTIVE STATE
+========================= */
+.sidebar-link.active {
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.9),
+    rgba(79, 70, 229, 0.9)
+  );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 20px rgba(79, 70, 229, 0.45);
+}
+
+.sidebar-link.active .sidebar-icon {
+  transform: scale(1.05);
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+      0 10px 25px rgba(0, 0, 0, 0.35);
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .sidebar-link {
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .sidebar-icon {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,144 @@
+/* =========================
+   NAVBAR CONTAINER
+========================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 0.9rem 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    135deg,
+    rgba(30, 41, 59, 0.85),
+    rgba(15, 23, 42, 0.85)
+  );
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   BRAND
+========================= */
+.navbar-brand h2 {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #f8fafc;
+  letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+   USER SECTION
+========================= */
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.navbar-user span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #cbd5f5;
+  opacity: 0.95;
+}
+
+/* =========================
+   BUTTON BASE
+========================= */
+.theme-toggle-btn,
+.logout-btn {
+  border: none;
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.55rem;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+/* =========================
+   THEME TOGGLE
+========================= */
+.theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   LOGOUT BUTTON
+========================= */
+.logout-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #ffffff;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(239, 68, 68, 0.4);
+}
+
+/* =========================
+   ACTIVE STATES
+========================= */
+.theme-toggle-btn:active,
+.logout-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* =========================
+   MOBILE DESIGN
+========================= */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.9rem 1.2rem;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .navbar-brand h2 {
+    font-size: 1.25rem;
+  }
+
+  .navbar-user {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .theme-toggle-btn,
+  .logout-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

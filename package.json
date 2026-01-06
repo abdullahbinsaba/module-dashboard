@@ -1,0 +1,24 @@
+{
+  "name": "modular-dashboard",
+  "version": "1.0.0",
+  "description": "Micro-Frontend Dashboard Application",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../shell-app && npm install && cd ../auth-app && npm install && cd ../dashboard-app && npm install && cd ../tasks-app && npm install && cd ../analytics-app && npm install",
+    "start:backend": "cd backend && npm start",
+    "start:shell": "cd shell-app && npm start",
+    "start:auth": "cd auth-app && npm start",
+    "start:dashboard": "cd dashboard-app && npm start",
+    "start:tasks": "cd tasks-app && npm start",
+    "start:analytics": "cd analytics-app && npm start"
+  },
+  "keywords": [
+    "micro-frontend",
+    "module-federation",
+    "react",
+    "webpack",
+    "dashboard"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+

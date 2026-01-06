@@ -1,0 +1,170 @@
+/* =========================
+   ERROR WRAPPER
+========================= */
+.error-fallback {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem;
+
+  background: radial-gradient(
+    circle at top,
+    rgba(239, 68, 68, 0.12),
+    rgba(15, 23, 42, 1)
+  );
+
+  color: #f8fafc;
+  text-align: center;
+}
+
+/* =========================
+   ERROR CARD
+========================= */
+.error-fallback > * {
+  max-width: 720px;
+}
+
+.error-fallback {
+  flex-direction: column;
+}
+
+/* =========================
+   ICON
+========================= */
+.error-fallback::before {
+  content: "⚠️";
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 8px 20px rgba(239, 68, 68, 0.4));
+}
+
+/* =========================
+   TITLE
+========================= */
+.error-fallback h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.03em;
+  color: #fee2e2;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+.error-fallback p {
+  font-size: 1.05rem;
+  color: #fecaca;
+  margin-bottom: 1.75rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   ERROR DETAILS (DEV)
+========================= */
+.error-details {
+  width: 100%;
+  text-align: left;
+
+  background: rgba(2, 6, 23, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.75rem;
+
+  padding: 1.25rem 1.5rem;
+  margin-top: 1rem;
+
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  line-height: 1.55;
+
+  color: #e5e7eb;
+
+  overflow-x: auto;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+/* =========================
+   RELOAD BUTTON
+========================= */
+.reload-button {
+  margin-top: 2rem;
+
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #ffffff;
+
+  border: none;
+  border-radius: 0.75rem;
+
+  padding: 0.75rem 1.6rem;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.2s ease;
+}
+
+.reload-button::before {
+  content: "↻";
+  font-size: 1.1rem;
+}
+
+/* =========================
+   BUTTON HOVER
+========================= */
+.reload-button:hover {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 30px rgba(239, 68, 68, 0.45);
+}
+
+/* =========================
+   BUTTON ACTIVE
+========================= */
+.reload-button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .error-fallback {
+    padding: 1.25rem;
+  }
+
+  .error-fallback h2 {
+    font-size: 1.5rem;
+  }
+
+  .error-fallback p {
+    font-size: 0.95rem;
+  }
+
+  .error-details {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+
+  .reload-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

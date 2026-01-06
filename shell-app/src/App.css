@@ -1,0 +1,63 @@
+/* =========================
+   APP WRAPPER
+========================= */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--background-color);
+}
+
+/* =========================
+   BODY (SIDEBAR + CONTENT)
+========================= */
+.app-body {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.main-content {
+  flex: 1;
+  padding: 1.5rem 2rem;
+
+  margin-left: 260px; /* matches sidebar width */
+
+  background: var(--background-color);
+  color: var(--text-primary);
+
+  transition:
+    margin-left 0.3s ease,
+    padding 0.2s ease;
+}
+
+/* =========================
+   LOADING STATE
+========================= */
+.loading {
+  min-height: calc(100vh - 72px); /* below navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .app-body {
+    flex-direction: column;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 1.25rem 1rem;
+  }
+}

@@ -11,7 +11,7 @@ modular-dashboard/
 ├── backend/                     # Node.js + Express + MySQL Backend
 │   ├── package.json
 │   ├── server.js                # Express server entry point
-│   ├── .env.example            # Environment variables template
+│   ├── .envcopy            # Environment variables template
 │   │
 │   ├── config/
 │   │   ├── database.js         # MySQL connection pool

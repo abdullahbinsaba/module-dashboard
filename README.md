@@ -62,12 +62,12 @@ modular-dashboard/
 
 3. **IMPORTANT: Create a `.env` file** with your configuration:
    ```bash
-   # Create .env file (copy from .env.example if it exists, or create new)
+   # Create .env file (copy from .envcopy if it exists, or create new)
    # Windows
-   copy .env.example .env
+   copy .envcopy .env
    
    # Linux/Mac
-   cp .env.example .env
+   cp .envcopy .env
    ```
 
 4. **CRITICAL: Update the `.env` file** with your database credentials and JWT secrets:

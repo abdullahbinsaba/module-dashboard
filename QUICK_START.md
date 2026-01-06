@@ -22,7 +22,7 @@ EXIT;
 ```bash
 cd backend
 npm install
-cp .env.example .env
+cp .envcopy .env
 # Edit .env with your MySQL credentials
 npm start
 ```

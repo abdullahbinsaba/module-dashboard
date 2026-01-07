@@ -7,6 +7,7 @@ modular-dashboard/
 ├── QUICK_START.md               # Quick setup guide
 ├── .gitignore                   # Git ignore file
 ├── package.json                 # Root package.json with helper scripts
+├── dashboard_db.sql             # database 
 │
 ├── backend/                     # Node.js + Express + MySQL Backend
 │   ├── package.json

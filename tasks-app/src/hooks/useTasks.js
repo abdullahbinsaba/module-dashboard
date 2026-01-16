@@ -40,7 +40,7 @@ const useTasks = (filters = {}, sortBy = 'created_at', sortOrder = 'desc') => {
       if (accessToken) {
         axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
       }
-      const response = await axios.post(`${API_URL}/tasks`, taskData);
+      const response1 = await axios.post(`${API_URL}/tasks`, taskData);
       fetchTasks(); // Refresh tasks after adding
       return { success: true, task: response.data.task };
     } catch (err) {
